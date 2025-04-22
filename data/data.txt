@@ -1,0 +1,179 @@
+Question 1: What is the first step before building a machine learning model?
+Answer 1: Understand the problem, define the objective, and identify the right metrics for evaluation.
+
+Question 2: How important is data cleaning in ML?
+Answer 2: Extremely important. Clean data improves model performance and reduces the chance of misleading results.
+
+Question 3: Should I normalize or standardize my data?
+Answer 3: Yes, especially for models sensitive to feature scales like SVMs, KNN, and neural networks.
+
+Question 4: When should I use feature engineering?
+Answer 4: Always consider it. Well-crafted features often yield better results than complex models.
+
+Question 5: How to handle missing values?
+Answer 5: Use imputation techniques like mean/median imputation, or model-based imputation depending on the context.
+
+Question 6: Should I balance my dataset for classification tasks?
+Answer 6: Yes, especially if the classes are imbalanced. Techniques include resampling, SMOTE, and class-weighting.
+
+Question 7: How do I select features for my model?
+Answer 7: Use domain knowledge, correlation analysis, or techniques like Recursive Feature Elimination or SHAP values.
+
+Question 8: Is it good to use all features available?
+Answer 8: Not always. Irrelevant or redundant features can reduce performance and increase overfitting.
+
+Question 9: How do I avoid overfitting?
+Answer 9: Use techniques like cross-validation, regularization, pruning (for trees), and dropout (for neural nets).
+
+Question 10: Why is cross-validation important?
+Answer 10: It provides a more reliable estimate of model performance by reducing bias from a single train-test split.
+
+Question 11: What’s a good train-test split ratio?
+Answer 11: Common ratios are 80/20 or 70/30, but use cross-validation for more robust evaluation.
+
+Question 12: Should I tune hyperparameters?
+Answer 12: Yes. Use grid search, random search, or Bayesian optimization to improve model performance.
+
+Question 13: What’s the difference between training and validation sets?
+Answer 13: Training set trains the model, validation set tunes hyperparameters, and test set evaluates final performance.
+
+Question 14: How do I know if my model is underfitting?
+Answer 14: It performs poorly on both training and test sets, indicating it hasn’t learned patterns well.
+
+Question 15: What are signs of overfitting?
+Answer 15: High accuracy on training data but poor generalization to test or validation data.
+
+Question 16: Is ensemble modeling useful?
+Answer 16: Yes. Ensembles like Random Forests or Gradient Boosting often outperform individual models.
+
+Question 17: When should I use deep learning?
+Answer 17: Use it when you have large datasets, complex patterns, or tasks like image and text processing.
+
+Question 18: What is data leakage and how to avoid it?
+Answer 18: Data leakage is using future or target-related information during training. Avoid by carefully splitting and preprocessing.
+
+Question 19: How do I measure model performance?
+Answer 19: Choose appropriate metrics: accuracy, precision, recall, F1, ROC-AUC for classification; RMSE, MAE for regression.
+
+Question 20: Why is model interpretability important?
+Answer 20: It builds trust, helps debug, and ensures compliance—especially important in high-stakes domains like healthcare.
+
+Question 21: What is the bias–variance tradeoff?  
+Answer 21: It’s the balance between underfitting (high bias) and overfitting (high variance); aim for the sweet spot where both are minimized.
+
+Question 22: What are common regularization techniques?  
+Answer 22: L1 (Lasso) adds an absolute-value penalty for sparsity, L2 (Ridge) adds a squared‑weight penalty for small weights, and Elastic Net blends both.
+
+Question 23: Why use a machine learning pipeline?  
+Answer 23: Pipelines automate and encapsulate preprocessing, feature engineering, and modeling steps to prevent leakage and ensure reproducibility.
+
+Question 24: How can I detect and handle outliers?  
+Answer 24: Use visualizations (boxplots, scatterplots) or statistical methods (IQR, Z‑score) and either remove, cap, or transform them.
+
+Question 25: What is dimensionality reduction?  
+Answer 25: Techniques like PCA, t‑SNE, or UMAP reduce feature space to capture the most informative axes and speed up learning.
+
+Question 26: When should I use cross‑validation other than k‑fold?  
+Answer 26: Use stratified CV for imbalanced classes, time‑series split for sequential data, or leave‑one‑out when data is scarce.
+
+Question 27: How do I evaluate regression models?  
+Answer 27: Use RMSE, MAE, R², and residual analysis to gauge error magnitude, bias, and goodness of fit.
+
+Question 28: What are learning curves and why use them?  
+Answer 28: Plots of training vs. validation error across dataset sizes help diagnose underfitting, overfitting, and whether more data will help.
+
+Question 29: What metrics work for imbalanced classification?  
+Answer 29: Precision, recall, F1-score, precision–recall curves, and area under the PR curve often give more insight than accuracy.
+
+Question 30: How do I perform hyperparameter optimization efficiently?  
+Answer 30: Start with random search for broad coverage, then refine with Bayesian optimization (e.g., Hyperopt, Optuna) or specialized libraries.
+
+Question 31: What is transfer learning?  
+Answer 31: Reusing a pretrained model’s weights (from large datasets like ImageNet or BERT) and fine‑tuning on your target task to save time and data.
+
+Question 32: When is online (incremental) learning appropriate?  
+Answer 32: For streaming data or when retraining from scratch is too costly; algorithms like SGD, Hoeffding trees, or online Ridge work well.
+
+Question 33: How do I monitor deployed models?  
+Answer 33: Track performance metrics, data drift (feature distribution changes), and prediction latency in real time to catch degradation early.
+
+Question 34: What is concept drift and how to handle it?  
+Answer 34: When the underlying data distribution shifts over time; handle by retraining on recent data, using adaptive algorithms, or windowed training.
+
+Question 35: How can I version control datasets and models?  
+Answer 35: Use tools like DVC or MLflow for dataset/model artifacts, Git for code, and clear tagging/schema to ensure reproducibility.
+
+Question 36: Why are explainability tools important?  
+Answer 36: Tools like LIME, SHAP, and feature‑importance plots help uncover model reasoning, detect bias, and satisfy regulatory requirements.
+
+Question 37: What’s the difference between batch and real‑time inference?  
+Answer 37: Batch inference processes data in groups (e.g., nightly), while real‑time serves predictions immediately—choose based on latency and throughput needs.
+
+Question 38: How do I handle categorical variables?  
+Answer 38: Use one‑hot encoding for nominal categories, ordinal encoding for ordered variables, or embedding layers for high‑cardinality features.
+
+Question 39: When should I ensemble different models?  
+Answer 39: When individual models have complementary strengths; techniques include bagging (Random Forest), boosting (XGBoost), and stacking.
+
+Question 40: What ethical considerations apply to ML?  
+Answer 40: Ensure fairness (avoid biased data), privacy (anonymize PII), transparency (explain decisions), and accountability (audit trails) throughout the pipeline.
+
+Question 41: How do I choose between classification and regression algorithms?  
+Answer 41: Match the algorithm to the task type—classification for discrete labels, regression for continuous outputs—and consider data size, feature characteristics, and interpretability needs.
+
+Question 42: What is the role of a validation curve?  
+Answer 42: Validation curves show model performance across a range of a single hyperparameter, helping identify underfitting or overfitting relative to that parameter.
+
+Question 43: When should I use a learning rate schedule?  
+Answer 43: Use schedules (step decay, cosine annealing, or exponential) during neural network training to improve convergence and avoid getting stuck in poor minima.
+
+Question 44: How can I speed up model training?  
+Answer 44: Techniques include using GPU acceleration, reducing feature dimensionality, mini-batch learning, data sampling, and efficient libraries (XGBoost, LightGBM).
+
+Question 45: What is early stopping?  
+Answer 45: A regularization method that halts training when validation performance stops improving, preventing overfitting and saving compute time.
+
+Question 46: How do I interpret a confusion matrix?  
+Answer 46: It shows true vs. predicted labels, letting you compute accuracy, precision, recall, specificity, and identify class-wise errors.
+
+Question 47: What’s the difference between bagging and boosting?  
+Answer 47: Bagging builds independent models in parallel on random subsets to reduce variance; boosting builds sequential models that focus on correcting predecessors’ errors to reduce bias.
+
+Question 48: When is it appropriate to use a support vector machine?  
+Answer 48: SVMs excel on smaller to medium-sized datasets with clear margins between classes and work well with high-dimensional feature spaces.
+
+Question 49: How do gradient boosting machines work?  
+Answer 49: They sequentially add decision trees that minimize the overall loss by fitting to the negative gradients (residuals) of the loss function.
+
+Question 50: What is the purpose of a residual plot?  
+Answer 50: It visualizes prediction errors versus predicted values or input features to detect non‑random patterns indicating model misspecification.
+
+Question 51: How do I check for multicollinearity?  
+Answer 51: Compute Variance Inflation Factor (VIF) scores or examine correlation matrices; high VIF (>5 or 10) suggests multicollinearity that may require feature removal or regularization.
+
+Question 52: What are kernel methods?  
+Answer 52: Techniques (e.g., radial basis function, polynomial) that map input features into higher-dimensional spaces to make them more separable for algorithms like SVM.
+
+Question 53: When should I use a generative model?  
+Answer 53: For tasks requiring data synthesis, density estimation, or semi‑supervised learning—examples include Gaussian Mixture Models, VAEs, and GANs.
+
+Question 54: How do I perform model stacking?  
+Answer 54: Train multiple “base” models, use their predictions as features, and train a “meta” model on those predictions to leverage diverse strengths.
+
+Question 55: Why is seed setting important in experiments?  
+Answer 55: Setting random seeds ensures reproducibility by fixing the randomness in data splits, weight initialization, and other stochastic processes.
+
+Question 56: How can I handle concept imbalance over time?  
+Answer 56: Use sliding windows, periodic retraining, or weighting schemes that give more importance to recent data in the training process.
+
+Question 57: What is a calibration curve?  
+Answer 57: A plot comparing predicted probabilities to observed outcomes, used to assess and correct a model’s probability estimates for reliability.
+
+Question 58: When should I use a custom loss function?  
+Answer 58: When standard losses don’t capture business objectives—e.g., asymmetric costs, ranking metrics, or domain-specific penalties—define and implement a tailored loss.
+
+Question 59: How do I secure my ML pipeline?  
+Answer 59: Implement access controls, encrypt data at rest and in transit, validate inputs to prevent adversarial attacks, and audit all model changes.
+
+Question 60: What is federated learning?  
+Answer 60: A decentralized training approach where models are trained locally on edge devices and only model updates are aggregated centrally, preserving data privacy.
