@@ -3,7 +3,7 @@ from llama_index.core.postprocessor.llm_rerank import LLMRerank
 from llama_index.core.schema import QueryBundle
 import os 
 from llama_index.llms.groq import Groq
-from rag.rag import get_index
+from rag import get_index
 from dotenv import load_dotenv
 from langchain_community.utilities import GoogleSerperAPIWrapper
 load_dotenv()
