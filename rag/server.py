@@ -5,7 +5,8 @@ import os
 from llama_index.llms.groq import Groq
 from rag import get_index
 from dotenv import load_dotenv
-from langchain_community.utilities import GoogleSerperAPIWrapper
+import requests
+import json
 load_dotenv()
 
 os.environ['HF_TOKEN'] = os.getenv('HF_TOKEN')
@@ -44,9 +45,22 @@ def rag_tool(query: str) -> str:
 @mcp.tool()
 def web_search(query: str) -> str:
     """Search the web for the given query."""
-    search = GoogleSerperAPIWrapper()
-    search_response = search.run(query)
-    return search_response
+    
+
+    url = "https://google.serper.dev/search"
+    api_key = os.getenv("SERPER_API_KEY")
+
+    payload = json.dumps({
+    "q": query,
+    })
+    headers = {
+    'X-API-KEY': api_key,
+    'Content-Type': 'application/json'
+    }
+
+    response = requests.request("POST", url, headers=headers, data=payload)
+
+    return response.text
 
 
 if __name__ == "__main__":
