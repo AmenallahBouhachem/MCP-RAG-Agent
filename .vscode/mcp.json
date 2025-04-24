@@ -1,0 +1,15 @@
+{
+    "servers": {
+    
+        "amenT": {
+            "type": "stdio",
+            "command": "uv",
+            "args": [
+                "--directory",
+                "C:\\Users\\Amen Allah\\OneDrive\\Bureau\\MCP-RAG-Agent\\rag",
+                "run",
+                "server.py"
+            ]
+        }
+    }
+}

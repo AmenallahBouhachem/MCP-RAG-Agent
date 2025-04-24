@@ -3,11 +3,15 @@ from llama_index.core.postprocessor.llm_rerank import LLMRerank
 from llama_index.core.schema import QueryBundle
 import os 
 from llama_index.llms.groq import Groq
-from rag import get_index
+from rag.rag import get_index
 from dotenv import load_dotenv
+from langchain_community.utilities import GoogleSerperAPIWrapper
 load_dotenv()
 
 os.environ['HF_TOKEN'] = os.getenv('HF_TOKEN')
+os.environ["SERPER_API_KEY"] = os.getenv("SERPER_API_KEY")
+os.environ["GROQ_API_KEY"] = os.getenv("GROQ_API_KEY")
+
 mcp = FastMCP(
     host='127.0.0.1',
     port=8000,
@@ -36,3 +40,14 @@ def rag_tool(query: str) -> str:
     context = context[0].node.text if context else "No relevant documents found."
 
     return context
+
+@mcp.tool()
+def web_search(query: str) -> str:
+    """Search the web for the given query."""
+    search = GoogleSerperAPIWrapper()
+    search_response = search.run(query)
+    return search_response
+
+
+if __name__ == "__main__":
+    mcp.run(transport='stdio')
