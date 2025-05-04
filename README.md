@@ -1,13 +1,10 @@
 # MCP-RAG-Agent
 
-## 🚀 Overview
+## 🌟 Overview
 
-**MCP-RAG-Agent** is an advanced implementation of a Model Context Protocol (MCP) server. It integrates two powerful tools:
+**MCP-RAG-Agent** is a cutting-edge AI-powered medical assistant. It allows users to input their symptoms and provides responses using the Retrieval-Augmented Generation (RAG) tool. If the RAG tool cannot find a suitable response, the system seamlessly performs an internet search to fetch accurate and real-time information.
 
-1. **RAG Tool**: A Retrieval-Augmented Generation tool designed to handle machine learning content queries by retrieving the most relevant documents from a vector database.
-2. **Web Search Tool**: A tool that performs internet searches to fetch information in response to user queries.
-
-This project leverages MCP to enable seamless interaction between AI systems and external tools, making it ideal for developers, researchers, and enthusiasts looking to build context-aware AI workflows.
+This project is designed to assist users in understanding medical conditions and symptoms, making it a valuable tool for healthcare professionals and individuals alike.
 
 ---
 
@@ -16,10 +13,11 @@ This project leverages MCP to enable seamless interaction between AI systems and
 ```
 MCP-RAG-Agent/
 ├── chromaDB/                            # Vector database
-├── data/                                # Text data
+├── data/                                # Medical symptoms and diseases data
 ├── Chroma_DB_Generation.py              # Script to generate the vector database
 ├── rag.py                               # Script to load the index of the vector database
 ├── server.py                            # Script to create the MCP server
+├── main.py                              # Script to run the Agent
 ├── requirements.txt                     # Packages to install
 └── README.md                            # Project overview
 ```
@@ -28,9 +26,9 @@ MCP-RAG-Agent/
 
 ## 🛠️ Features
 
-- **MCP Integration**: Implements the Model Context Protocol for standardized AI-tool interactions.
-- **RAG Tool**: Retrieves relevant machine learning documents from a vector database.
-- **Web Search Tool**: Fetches real-time information from the internet.
+- **Medical Symptom Analysis**: Users can input symptoms to receive AI-generated responses.
+- **RAG Tool**: Retrieves relevant medical information from a vector database.
+- **Web Search Tool**: Fetches real-time medical information from the internet when needed.
 - **ChromaDB**: Utilizes ChromaDB for efficient vector storage and retrieval.
 
 ---
@@ -55,15 +53,15 @@ MCP-RAG-Agent/
 ## 🚀 Usage
 
 1. **Start the MCP Server**:
-   Run the `server.py` script to start the MCP server:
+   Run the `main.py` script to start the MCP server:
 
    ```bash
-   go to mcp.json file and press start server button
+   python main.py
    ```
-2. **Use the Tools**:
+2. **Interact with the Agent**:
 
-   - **RAG Tool**: Query the vector database for machine learning content.
-   - **Web Search Tool**: Perform internet searches for real-time information.
+   - Input your symptoms into the system.
+   - The agent will respond using the RAG tool or perform an internet search if necessary.
 
 ---
 
